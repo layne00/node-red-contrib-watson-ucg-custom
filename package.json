@@ -34,7 +34,7 @@
   "name": "node-red-node-watson-ucg-custom",
   "node-red": {
     "nodes": {
-      "node-red-node-watson-ucg-custom": "services/conversation/v1.js"
+      "watson-conversation-ucg-custom-v1": "services/conversation/v1.js"
     }
   },
   "optionalDependencies": {},
@@ -44,5 +44,5 @@
     "url": "git+https://github.com/watson-developer-cloud/node-red-node-watson.git"
   },
   "scripts": {},
-  "version": "0.3.12"
+  "version": "0.3.11"
 }

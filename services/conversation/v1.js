@@ -257,7 +257,7 @@ module.exports = function (RED) {
     })
   }
 
-  RED.nodes.registerType('node-red-node-watson-ucg-custom', WatsonConversationV1Node, {
+  RED.nodes.registerType('watson-conversation-ucg-custom-v1', WatsonConversationV1Node, {
     credentials: {
       username: {
         type: 'text'
