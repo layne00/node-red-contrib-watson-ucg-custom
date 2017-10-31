@@ -34,7 +34,7 @@
   "name": "node-red-node-watson-ucg-custom",
   "node-red": {
     "nodes": {
-      "watson-conversation-ucg-custom-v1": "services/conversation/v1.js"
+      "node-red-node-watson-ucg-custom": "services/conversation/v1.js"
     }
   },
   "optionalDependencies": {},

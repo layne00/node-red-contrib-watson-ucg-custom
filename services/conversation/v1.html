@@ -14,7 +14,7 @@
   limitations under the License.
 -->
 
-<script type="text/x-red" data-template-name="watson-conversation-ucg-custom-v1">
+<script type="text/x-red" data-template-name="node-red-node-watson-ucg-custom">
     <div id="credentials-check" class="form-row">
         <div class="form-tips">
             <i class="fa fa-question-circle"></i><b> Please wait: </b> Checking for bound service credentials...
@@ -50,6 +50,10 @@
         <input type="text" id="node-input-workspaceid" placeholder="WorkspaceID">
     </div>
     <div class="form-row">
+        <label for="node-input-timeout"><i class="fa fa-tag"></i>timeout</label>
+        <input type="text" id="node-input-timeout" placeholder="15000">
+    </div>
+    <div class="form-row">
         <label>&nbsp;</label>
         <input type="checkbox" id="node-input-context" style="display: inline-block; width: auto; vertical-align: top;">
         <label for="node-input-context" style="width: 70%;"> Save context</label>
@@ -66,7 +70,7 @@
 </script>
 
 
-<script type="text/x-red" data-help-name="watson-conversation-ucg-custom-v1">
+<script type="text/x-red" data-help-name="node-red-node-watson-ucg-custom">
 	<p>With the IBM Watson™ Conversation service you can create cognitive agents – virtual agents that combine machine learning, natural language understanding, and integrated dialog scripting tools to provide outstanding customer engagements.</p>
 
     <p><b>Usage</b></p>
@@ -133,15 +137,17 @@
     };
 
     (function() {
-        RED.nodes.registerType('watson-conversation-ucg-custom-v1', {
+        RED.nodes.registerType('node-red-node-watson-ucg-custom', {
             category: 'IBM Watson',
             defaults: {
               name: {value: ''},
               workspaceid: {value: ''},
               multiuser: {value: false},
               context: {value: true},
+              timeout: {value: ''},
               'default-endpoint' :{value: true},
               'service-endpoint' :{value: 'https://gateway.watsonplatform.net/conversation/api'}
+
             },
             credentials: {
               username: {type:'text'},
