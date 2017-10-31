@@ -31,14 +31,13 @@
       "email": "layne00@gmail.com"
     }
   ],
-  "name": "node-red-node-watson-ucg-custom",
+  "name": "node-red-contrib-watson-ucg-custom",
   "node-red": {
     "nodes": {
       "watson-conversation-ucg-custom-v1": "services/conversation/v1.js"
     }
   },
   "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/watson-developer-cloud/node-red-node-watson.git"
