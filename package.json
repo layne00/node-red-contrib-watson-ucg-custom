@@ -43,5 +43,5 @@
     "url": "git+https://github.com/watson-developer-cloud/node-red-node-watson.git"
   },
   "scripts": {},
-  "version": "0.5.3"
+  "version": "0.5.4"
 }
