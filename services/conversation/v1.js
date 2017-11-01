@@ -180,9 +180,15 @@ module.exports = function (RED) {
 
     serviceSettings.username = userName
     serviceSettings.password = passWord
+    if (!config.timeout && !msg.params.timeout) {
+      serviceSettings.timeout = 12000     
+    } else if (config.timeout !== '') {
+      serviceSettings.timeout = Number(config.timeout)
+    }
     if (msg.params && msg.params.timeout) {
       serviceSettings.timeout = msg.params.timeout
     }
+    node.warn('time out value is ' + serviceSettings.timeout)
     node.service = new ConversationV1(serviceSettings)
     return true
   }
