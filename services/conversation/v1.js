@@ -180,7 +180,7 @@ module.exports = function (RED) {
 
     serviceSettings.username = userName
     serviceSettings.password = passWord
-    if (!config.timeout && !msg.params.timeout) {
+    if (config.timeout === '' && typeof msg.params.timeout === 'undefined') {
       serviceSettings.timeout = 12000     
     } else if (config.timeout !== '') {
       serviceSettings.timeout = Number(config.timeout)
