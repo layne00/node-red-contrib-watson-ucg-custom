@@ -188,7 +188,6 @@ module.exports = function (RED) {
     if (msg.params && msg.params.timeout) {
       serviceSettings.timeout = msg.params.timeout
     }
-    node.warn('time out value is ' + serviceSettings.timeout)
     node.service = new ConversationV1(serviceSettings)
     return true
   }
